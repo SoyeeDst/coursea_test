@@ -1,0 +1,44 @@
+	<!doctype html>
+
+	<html>
+	<head>
+	   <meta charset="utf-8">
+	   <title>Web worker test</title>
+	   <style type="text/css">
+	   	  button {
+	   	  	border：2px, solid, red;
+	   	  }
+	   </style>
+	   <script>
+	      var worker;
+
+	      function startWorker() {
+	          if (typeof(Worker) !== 'undefined') {
+	            if (typeof(worker) == 'undefined') {
+	               worker = new Worker("./js/worker.js");
+	             }
+	             worker.onmessage = function(event) {
+	               	document.getElementById("count").innerHTML = event.data;	     
+	             };
+	          } else {
+	          	alert("Sorry, worker is not supported yet");
+	          }
+	      } 
+
+	      function endWorker() {
+	          if (typeof(worker) != undefined) {
+	          	worker.terminate();
+	          	worker = undefined;
+	          }
+	      }
+	   </script>
+	</head>
+	  
+	<body> 
+	   <p>计数：</p><output id="count"></output>
+	   <div>
+	      <button id="start" onclick="startWorker()">Start</button>&nbsp;
+	      <button id="stop" onclick="endWorker()">Termiante</button>
+	   </div>
+	</body>
+	</html>
