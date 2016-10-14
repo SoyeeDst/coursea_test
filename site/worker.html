@@ -1,44 +1,60 @@
-	<!doctype html>
+		<!doctype html>
 
-	<html>
-	<head>
-	   <meta charset="utf-8">
-	   <title>Web worker test</title>
-	   <style type="text/css">
-	   	  button {
-	   	  	border：2px, solid, red;
-	   	  }
-	   </style>
-	   <script>
-	      var worker;
+		<html>
+		<head>
+		   <meta charset="utf-8">
+		   <title>Web worker test</title>
+		   <style type="text/css">
+		   	  button {
+		   	  	border：2px, solid, red;
+		   	  }
+		   </style>
+		   <script>
+		      var worker;
 
-	      function startWorker() {
-	          if (typeof(Worker) !== 'undefined') {
-	            if (typeof(worker) == 'undefined') {
-	               worker = new Worker("./js/worker.js");
-	             }
-	             worker.onmessage = function(event) {
-	               	document.getElementById("count").innerHTML = event.data;	     
-	             };
-	          } else {
-	          	alert("Sorry, worker is not supported yet");
-	          }
-	      } 
+		      function startWorker() {
+		          if (typeof(Worker) !== 'undefined') {
+		            if (typeof(worker) == 'undefined') {
+		               worker = new Worker("./js/worker.js");
+		             }
+		             worker.onmessage = function(event) {
+		               	document.getElementById("count").innerHTML = event.data;	     
+		             };
+		          } else {
+		          	alert("Sorry, worker is not supported yet");
+		          }
+		      } 
 
-	      function endWorker() {
-	          if (typeof(worker) != undefined) {
-	          	worker.terminate();
-	          	worker = undefined;
-	          }
-	      }
-	   </script>
-	</head>
-	  
-	<body> 
-	   <p>计数：</p><output id="count"></output>
-	   <div>
-	      <button id="start" onclick="startWorker()">Start</button>&nbsp;
-	      <button id="stop" onclick="endWorker()">Termiante</button>
-	   </div>
-	</body>
-	</html>
+		      function endWorker() {
+		          if (typeof(worker) != undefined) {
+		          	worker.terminate();
+		          	worker = undefined;
+		          }
+		      }
+		   </script>
+		</head>
+		  
+		<body>
+		   <nav>
+              <a href="index.asp">Home</a>
+              <a href="html5_meter.asp">Previous</a>
+              <a href="html5_noscript.asp">Next</a>
+           </nav>
+
+		   <p>计数：</p><output id="count"></output>
+		   <div>
+		      <button id="start" onclick="startWorker()">Start</button>&nbsp;
+		      <button id="stop" onclick="endWorker()">Termiante</button>
+		   </div>
+
+		   <menu type=""> 有三种类型 
+	          <li><input type="checkbox" />Red</li> 
+	          <li><input type="checkbox" />Green</li>
+	          <li><input type="checkbox" />Blue</li>
+	          <li><input type="color"></li>>  
+	       </menu>
+
+	       <a href="http://www.baidu.com" hreflang="zh"  ref="external ">百度</a>
+
+		</body>
+		</html>

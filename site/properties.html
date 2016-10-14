@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Properties test</title>
+</head>
+
+<body>
+   <!-- user defined properties -->
+   <input type = "text" data-me = "jiqi" name = "jiqi" id = "jiqi" />
+
+   <script>
+      var jiqi = document.getElementById("jiqi");
+      alert(jiqi.dataset.me);
+   </script>
+
+  <!-- test hidden properties -->
+  <span hidden = "hidden" id = "hidden" name = "hidden">你看不见我</span>
+
+  <script>
+     var hidden = document.getElementById("hidden");
+     if (hidden.hidden) {
+       hidden.hidden = false;
+       hidden.innerHTML = "看见我了吧"
+     }
+  </script> 
+
+  <!-- spell check -->
+  <textarea spellcheck="true" name = "myarea" id = "myarea" rows = 10 cols = 30>
+  </textarea>
+
+  <!-- content editable -->
+  <p contenteditable="true">这里的内容是可以编辑的</p> 
+
+  <!-- desginmode, 这个是针对js使用的，设置on元素就可编辑 off为不可编辑 -->  
+  <script>  
+     window.document.designMode="on";  
+  </script>  
+   
+</body>
+</html>
