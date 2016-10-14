@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>CSS selector test</title>
+   <style type="text/css">
+     section li {
+        color: green;
+     }
+     
+     /* multiple styles */
+     .multi1.multi2 {
+        color : green;
+        font-size: 20px;
+        margin-left: 400px;
+     }
+
+     h1, h2 {
+        color : red;
+        font-size: 18px;
+     }
+
+   </style>
+</head>
+
+<body>
+   <h1>H1 heading title</h1>
+   <h2>H2 heading title</h2>
+   <section>
+      Table contents:
+      <ul>
+         <li>section1</li>
+         <li>section2</li>
+         <li>section3</li>
+      </ul>
+   </section>
+
+   <article>
+     Article contents:
+     <ul>
+        <li>article 1</li>
+        <li>article 2</li>
+        <li>article 3</li>
+     </ul>
+   </article>
+
+   <span class="multi1 multi2">Multiple styles test</span>
+</body>
+</html>
