@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Pseudo selector test</title>
+   <style type="text/css">
+       header li {
+          list-style:none
+       }
+
+       a:link, a:visited {
+          text-decoration:none;
+          border:1px solid blue;
+          background-color:green;
+          display:block;
+          color:black;
+          margin-bottom:1px;
+          width:200px;
+          text-align:center;
+       }
+
+       a:hover, a:active {
+          background-color:red;
+          color:purple;
+       }
+
+       header li:nth-child(2) {
+          background-color: blue;
+       }
+
+       section div:nth-child(odd) {
+          background-color:gray;
+       }
+
+       section div:nth-child(even) {
+          background-color:purple;
+       }
+
+       section div:nth-child(2):hover {
+          cursor: pointer;
+          background-color: yellow;
+       }
+   </style>
+</head>
+
+<body>
+   <header>
+      <ul>
+         <li><a href = "http://www.google.com.cn">Google</li>
+         <li><a href = "http://www.baidu.com">Baidu</li>
+         <li><a href = "http://www.sogou.com">Sogou</li>
+      </ul>
+   </header>
+
+   <section>
+     <div>div1</div>
+     <div>div1</div>
+     <div>div1</div>
+     <div>div1</div>
+     <div>div1</div>
+     <div>div1</div>
+     <div>div1</div>
+     <div>div1</div>
+     <div>div1</div>
+     <div>div1</div>
+     <div>div1</div>
+     <div>div1</div>
+     <div>div1</div>
+   </section>
+</body>
+</html>
