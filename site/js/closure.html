@@ -1,0 +1,60 @@
+	<!doctype html>
+
+	<html>
+	<head>
+	   <meta charset="utf-8">
+	   <title>The course is so cool</title>
+	   <script type="text/javascript">
+	         
+	         function lazy_function(arr) {
+	         	var sum = function() {
+	         		return arr.reduce(function (x, y) {
+                         return x * 2 + y;
+	         		});
+	         	}
+	         	return sum;
+	         }
+
+	         var data = [1, 2, 3, 4, 5];
+	         var fun = lazy_function(data);
+	         alert(fun());
+
+            function count() {
+            	var array = [];
+            	for (var i = 0; i <= 3; i++) {
+            		array.push(function() {
+            			return i * i;
+            		})
+            	}
+            	return array;
+            }
+
+            var results = count();
+            alert(results[0]());
+            alert(results[1]());
+            alert(results[2]());
+
+            function countV2() {
+            	var array = [];
+            	for (var i = 0; i < 3; i++) {
+            		array.push((function(n) {
+                       return function() {
+                       	   return n * n;
+                       }
+            		})(i));
+            	}
+            	return array;
+            }
+
+            var results2 = countV2();
+            alert(results2[0]());
+            alert(results2[1]());
+            alert(results2[2]());
+
+	   </script>
+	</head>
+	  
+	<body>
+	<h1>I'm learning Coursea too much</h1>
+	</body>
+	</html>

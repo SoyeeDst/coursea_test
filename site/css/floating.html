@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Floating</title>
+   <style type="text/css">
+
+      * {
+        box-sizing: border-box;
+      }
+
+      div {
+        background-color: green;
+      }
+
+      p {
+         width: 50px;
+         height: 50px;
+         border: 1px solid black;
+         margin: 0px;
+      }
+
+      #p1 {
+         background-color: red;
+         float : right;
+      }
+
+      #p2 {
+        background-color: yellow;
+        float : left;
+        height : 100px;
+      }
+
+      #p3 {
+        background-color: blue;
+        float : left;
+        clear : both;
+      }
+
+      #p4 {
+        background-color: green;
+        float : left;
+      }
+
+      section {
+        clear : both;
+      }
+   	  
+   </style>
+</head>
+  
+<body>
+   <h1>Background</h1>
+
+   <div id="bg">
+      <p id="p1"></p>
+      <p id="p2"></p>
+      <p id="p3"></p>
+      <p id="p4"></p>
+
+      <section>This is regular content continuing after the the paragraph boxes.</section>
+   </div>
+   
+</body>
+</html>

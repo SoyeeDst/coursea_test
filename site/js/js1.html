@@ -1,0 +1,62 @@
+	<!doctype html>
+
+	<html>
+	<head>
+	   <meta charset="utf-8">
+	   <title>The course is so cool</title>
+	   <script type="text/javascript">
+	         var a = 1 + 2;
+	         // array
+	         var array = [1, 2, 3, 4, 5, 6];
+	         
+	         array.forEach(function(element) {
+                alert("Current element is : " + element);
+	         });
+
+	         alert (`${a}\"`);
+	         var xiaoming = {
+	                         name: '小明',
+	                         birth: 1990,
+	                         school: 'No.1 Middle School',
+	                         height: 1.70,
+	                         weight: 65,
+	                         score: null
+	                        };
+
+
+
+	        alert(xiaoming['name']);
+	        alert(xiaoming['mother']);
+	        alert("shot" in xiaoming);
+
+	        xiaoming.mother = 'sijiao';
+	        alert(xiaoming.mother);
+            
+            var abc = function(x) {
+            	if (typeof(x) !== 'number') {
+            		throw 'Not a number';
+            	}
+
+            	if (x >= 0) {
+            		return x;
+            	} else {
+            		return -x;
+            	}
+            };
+
+            var argumentabc = function(x) {
+            	for (var i = 0; i< arguments.length; i++) {
+                    alert(arguments[i]); // 10, 20, 30
+                }
+            };
+
+            argumentabc(1);
+            argumentabc(1, 2, 3);
+
+	   </script>
+	</head>
+	  
+	<body>
+	<h1>I'm learning Coursea too much</h1>
+	</body>
+	</html>

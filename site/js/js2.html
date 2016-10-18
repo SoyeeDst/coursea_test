@@ -1,0 +1,38 @@
+	<!doctype html>
+
+	<html>
+	<head>
+	   <meta charset="utf-8">
+	   <title>The course is so cool</title>
+	   <script type="text/javascript">
+	         
+	         var array = [1, 2, 3, 4, 5, 6];
+	         var square = array.map(pow)
+
+	         function pow(x) {
+	         	return x * x;
+	         }
+	         
+	         alert(square);
+             
+             // like foldLeft and foldRight
+	         var reduceRes = array.reduce(function(x, y) {
+	         	return x * y;
+	         });
+
+	         alert(reduceRes);
+
+	         var filtered = array.filter(function(x){
+                return x > 3;
+	         });
+
+	         alert(filtered);
+
+
+	   </script>
+	</head>
+	  
+	<body>
+	<h1>I'm learning Coursea too much</h1>
+	</body>
+	</html>
