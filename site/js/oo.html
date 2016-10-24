@@ -1,0 +1,81 @@
+	<!doctype html>
+
+	<html>
+	<head>
+	   <meta charset="utf-8">
+	   <title>Object Oriented Programming</title>
+	   <script type="text/javascript">
+  	   var Student = {
+                            name: 'Robot',
+                            height: 1.2,
+                            run: function () {
+                                 console.log(this.name + ' is running...');
+                            }
+                      };
+
+        var xiaoming = {
+            name: '小明'
+            };
+
+        xiaoming.__proto__ = Student;
+        alert(xiaoming.name);
+        xiaoming.run();
+
+        var Bird = {
+             fly : function () {
+                 alert("I can fly, fuck");
+             }
+        };
+
+        xiaoming.__proto__ = Bird;
+        xiaoming.fly();
+
+
+        // Use object create method to construct object
+        function createStudent(name) {
+           if (typeof(name) === 'undefined') {
+             throw error;
+           }
+           var object = Object.create(Student);
+           object.name = name;
+           return object;
+        }
+
+        var xiaoli = createStudent("xiaoli");
+        xiaoli.run();
+
+        alert(xiaoli.__proto__ === Student);
+
+        function Stu(name) {
+          this.name = name;
+          this.fly = function() {
+             alert("Who am I ??" + this.name);
+          }
+        }
+
+        var stu = new Stu("Fengwei");
+        stu.fly();
+            
+	   </script>
+	</head>
+	  
+	<body>
+	<h1>Object Oriented Programming</h1>
+    <div id ="xiaoming"></div>
+    <script type="text/javascript">
+        var xiaoming = {
+                              name: '小明',
+                              age: 14,
+                              gender: true,
+                              height: 1.65,
+                              grade: null,
+                              middleschool: '\"W3C\" Middle School',
+                              skills: ['JavaScript', 'Java', 'Python', 'Lisp']
+                            };
+
+        var json = JSON.stringify(xiaoming);
+
+        document.getElementById("xiaoming").innerHTML = json;
+    </script>
+	</body>
+	</html>

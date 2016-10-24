@@ -1,0 +1,35 @@
+	<!doctype html>
+
+	<html>
+	<head>
+	   <meta charset="utf-8">
+	   <title>Promises</title>
+	   <script type="text/javascript">
+        // promise test
+        new Promise(function(success, failure) {
+            console.log("start new promise");
+            var timeout = Math.random() * 2;
+            console.log("set timeout to be : " + timeout);
+            setTimeout(function() {
+                if (timeout < 1) {
+                   console.log("time out is less than 1");
+                   success("Succeed");
+                } else {
+                   console.log("time out is greater than 1");
+                   failure("promise failed");
+                }
+            }, timeout * 1000);
+        }).then(function(r) {
+           console.log("Done : " + r);
+        }).catch(function(n) {
+           console.log("Failed : " + n);
+        });
+
+	   </script>
+	</head>
+	  
+	<body>
+	<h1>Promises</h1>
+    
+	</body>
+	</html>

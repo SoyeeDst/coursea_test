@@ -1,0 +1,47 @@
+	<!doctype html>
+
+	<html>
+	<head>
+	   <meta charset="utf-8">
+	   <title>Standard Object Oriented</title>
+	   <script type="text/javascript">
+	         var s = "Hello world";
+             // alert(typeof(s));
+
+             var str = String('Hello sperm');
+             // alert(str === 'Hello sperm');
+             
+             var b = "SHABI"
+             alert(`${b}`);
+
+             var re = /^(\d{3})-(\d{3,8})$/;
+             alert(re.exec('010-12345').length); // ['010-12345', '010', '12345']
+             alert(re.exec('010 12345') === null); // null
+            
+	   </script>
+	</head>
+	  
+	<body>
+	<h1>Standard Object Oriented</h1>
+    <div id ="xiaoming"></div>
+    <script type="text/javascript">
+        var xiaoming = {
+                              name: '小明',
+                              age: 14,
+                              gender: true,
+                              height: 1.65,
+                              grade: null,
+                              middleschool: '\"W3C\" Middle School',
+                              skills: ['JavaScript', 'Java', 'Python', 'Lisp']
+                            };
+
+        var json = JSON.stringify(xiaoming);
+
+        document.getElementById("xiaoming").innerHTML = json;
+
+        var reversedXm = JSON.parse(json);
+        alert(reversedXm.name);
+
+    </script>
+	</body>
+	</html>
