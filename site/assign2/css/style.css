@@ -47,6 +47,11 @@ section {
    background-color : blue;
 }
 
+.content {
+   font-family: serif;
+   clear : right;
+}
+
 
 @media (min-width: 992px) { 
   section {
