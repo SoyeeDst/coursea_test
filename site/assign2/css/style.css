@@ -11,23 +11,21 @@ h1 {
   font-family: Helvetica;
 }
 
-section {
-  border: 1px thick black;
+.section1,.section2,.section3 {
+  border: 1px solid black;	
   background-color: grey;
   height: 100px;
   font-family: Helvetica;
   color: white;
   float: left;
   box-sizing: border-box; 
-  text-overflow: scroll;
-  margin: 4px;
+  margin:6px;
 }
 
 .menutitle {
    position : relative;
    top : 0px;	
-   margin-right: 10px;	
-   border : 1px thick black;
+   border : 1px solid black;
    width : 30%;
    float : right;
    clear : left;
@@ -49,26 +47,24 @@ section {
 
 .content {
    font-family: serif;
-   clear : right;
+   clear: right;
 }
 
 
 @media (min-width: 992px) { 
-  section {
+  .section1,.section2,.section3 {
   	 width: 32%;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  section {
-  	 width: 49%;
+  .section1,.section2 {
+  	 width: 48%;
   }
 }
 
 @media (max-width: 767px) {
-  section {
-  	 width: 100%;
-  }
+
 }
 
 
