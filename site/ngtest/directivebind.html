@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="isolatedattrbind">
+<head>
+   <meta charset="utf-8">
+   <title>Isolated attributes</title>
+   <script type="text/javascript" src="js/angular.js"></script>
+   <script type="text/javascript" src="js/directivebind.js"></script>
+</head>
+		  
+<body ng-controller="isiolatedattrctrl">
+
+   <label>来自controller的属性值: </label><input type = 'text' ng-model='value'>
+   
+   <!-- Single direction binding -->
+   <singledirectionbinding flavor={{value}}></singledirectionbinding>
+
+</body>
+</html>

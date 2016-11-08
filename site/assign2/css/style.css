@@ -22,6 +22,17 @@ h1 {
   margin:6px;
 }
 
+.nosection {
+  float : left;
+  width : 100%;
+  border: 1px solid blue;
+  height: 100px;
+}
+
+.middlebutton {
+  margin: 40px 45%;
+}
+
 .menutitle {
    position : relative;
    top : 0px;	

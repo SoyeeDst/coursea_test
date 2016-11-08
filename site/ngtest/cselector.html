@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="ColorApp">
+<head>
+   <meta charset="utf-8">
+   <title>CSS selector</title>
+   <script type="text/javascript" src="js/angular.js"></script>
+   <script type="text/javascript" src="js/ColorApp.js"></script>
+   <style type="text/css">
+       .blue {
+           color:blue;
+       }
+
+       .red {
+           color:red;
+       }
+   </style>
+</head>
+		  
+<body>
+   <div ng-controller="ColorCtrl">
+       <p><span ng-class='{red:isRed, blue:isBlue}'>我是一段文本</span>
+
+       <div>
+          <button ng-click="exchange()">变换颜色</button>
+       </div>
+   </div>
+
+   </div> 
+</body>
+</html>

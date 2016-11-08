@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="helloApp">
+<head>
+   <meta charset="utf-8">
+   <title>Hello Angular</title>
+   <script type="text/javascript" src="js/angular.js"></script>
+   <script type="text/javascript" src="js/HelloAngular.js"></script>
+</head>
+		  
+<body>
+   <div ng-controller="HelloCtrl">
+       <p>{{name}}, wan le ma　？？</p>
+   </div>
+
+   <input type="text" ng-model="inputname" name="xixi" />
+   <span>你输入的是:{{inputname}}</span>
+
+   <div>
+     <ul> 
+        <li ng-repeat="name in ['I', 'AM', 'A', 'FUCKER']">
+            {{name}}
+        </li>
+     </ul>
+   </div>
+
+   <hello></hello>
+   
+
+   </div> 
+</body>
+</html>
